@@ -25,7 +25,6 @@ import { authenticationService } from "../Services/authenticationService";
 const useStyles = makeStyles((theme) => ({
   root: {
     height: "100%",
-  
   },
   headerRow: {
     maxHeight: 60,
@@ -50,9 +49,6 @@ const useStyles = makeStyles((theme) => ({
   newMessageRow: {
     width: "100%",
     padding: theme.spacing(0, 2, 1),
-  },
-  circles: {
-    background:'#000'
   },
   messageBubble: {
     padding: 10,
@@ -131,7 +127,7 @@ const ChatBox = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (props.scope === "") {
+    if (props.scope === "Global Chat") {
       sendGlobalMessage(newMessage).then(() => {
         setNewMessage("");
       });
@@ -143,9 +139,8 @@ const ChatBox = (props) => {
   };
 
   return (
-
-    <Grid container className={classes.root} >
-      <Grid item  xs={12} className={classes.headerRow}>
+    <Grid container className={classes.root}>
+      <Grid item xs={12} className={classes.headerRow}>
         <Paper className={classes.paper} square elevation={2}>
           <Typography color="inherit" variant="h6">
             {props.scope}
@@ -167,7 +162,7 @@ const ChatBox = (props) => {
                     alignItems="flex-start"
                   >
                     <ListItemAvatar className={classes.avatar}>
-                      <Avatar className={classes.circles}>
+                      <Avatar>
                         {commonUtilites.getInitialsFromName(m.fromObj[0].name)}
                       </Avatar>
                     </ListItemAvatar>
@@ -215,8 +210,7 @@ const ChatBox = (props) => {
           </Grid>
         </Grid>
       </Grid>
-      </Grid>
-
+    </Grid>
   );
 };
 
