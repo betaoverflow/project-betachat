@@ -1,0 +1,7 @@
+.homepage-bgimage {
+  background: url("https://cdn.dribbble.com/users/3530369/screenshots/14123929/dribble_5_4x.png");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
