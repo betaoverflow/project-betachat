@@ -66,7 +66,7 @@ nodemon server.js
 The Server Runs on **localhost:5000**
 
 
-<img src='https://github.com/betaoverflow/project-betachat/blob/main/betachat-chatscreen.png'>
+<img src='https://github.com/betaoverflow/project-betachat/blob/main/chatscreen.png'>
 
 `Contributions are welcome 🎉🎉`
 
